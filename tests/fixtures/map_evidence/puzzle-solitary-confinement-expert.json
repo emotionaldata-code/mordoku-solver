@@ -1,0 +1,670 @@
+{
+  "puzzle_id": "puzzle-solitary-confinement-expert",
+  "source_url": "https://murdoku.com/play_puzzles/en/puzzle-solitary-confinement-expert.json",
+  "source_sha256": "0aa35a1907d58dc0a03d5b30bf2e1378927126cbb0f8e44948bd3e0df65d44cf",
+  "map_fields_sha256": "7f1cdec4538ece787291d452e69b94ba4527e1188d4c9639dba03412a6559d3e",
+  "method": "Map fields only; official PDF embedded text positions, no pixels; published clue highlighter Vo/Yo for connected cells. No official placements or hints inspected.",
+  "pdf_url": "https://murdoku.com/pdf/solitary-confinement-bw.pdf",
+  "pdf_sha256": "bd148ba8ac5ca37bd42bc345e17c38e60e4731adecd4e237e521192dc12557ae",
+  "pdf_grid_bbox": [
+    417.923309,
+    179.639984,
+    776.442322,
+    538.158997
+  ],
+  "renderer_url": "https://murdoku.com/play/assets/puzzle-core-Cla4GAxx.js",
+  "renderer_sha256": "ce83d491051375d8ff1d1069cfa910fe9d18ab2bfcb48d5d07e9fcf893d369ec",
+  "in_front_definition": "The two squares connected to a door or window.",
+  "edge_rule": "Vo includes both incident cells for every positive windowsH/windowsV value; Yo uses that cell set for door and window front clues. Values 1 and 2 are both included.",
+  "labels": [
+    {
+      "text": "CAFETERIA",
+      "bbox": [
+        619.243225,
+        459.413208,
+        663.51001,
+        470.493195
+      ],
+      "anchor_cell": {
+        "row": 12,
+        "col": 9
+      },
+      "area": "area_12"
+    },
+    {
+      "text": "CELL A",
+      "bbox": [
+        554.021973,
+        234.771591,
+        581.755066,
+        245.851593
+      ],
+      "anchor_cell": {
+        "row": 2,
+        "col": 6
+      },
+      "area": "area_2"
+    },
+    {
+      "text": "CELL B",
+      "bbox": [
+        621.432617,
+        235.506912,
+        649.124878,
+        246.586914
+      ],
+      "anchor_cell": {
+        "row": 2,
+        "col": 9
+      },
+      "area": "area_3"
+    },
+    {
+      "text": "CELL C",
+      "bbox": [
+        723.411072,
+        235.550888,
+        751.593445,
+        246.63089
+      ],
+      "anchor_cell": {
+        "row": 2,
+        "col": 14
+      },
+      "area": "area_17"
+    },
+    {
+      "text": "CELL D",
+      "bbox": [
+        553.525879,
+        346.149506,
+        582.157532,
+        357.229492
+      ],
+      "anchor_cell": {
+        "row": 7,
+        "col": 6
+      },
+      "area": "area_0"
+    },
+    {
+      "text": "CELL E",
+      "bbox": [
+        621.870605,
+        347.062622,
+        649.464844,
+        358.142609
+      ],
+      "anchor_cell": {
+        "row": 7,
+        "col": 9
+      },
+      "area": "area_1"
+    },
+    {
+      "text": "CHECKPOINT",
+      "bbox": [
+        534.512207,
+        527.674927,
+        588.908264,
+        538.754944
+      ],
+      "anchor_cell": {
+        "row": 15,
+        "col": 6
+      },
+      "area": "area_19"
+    },
+    {
+      "text": "COURTYARD",
+      "bbox": [
+        436.137695,
+        280.003998,
+        486.849609,
+        291.083984
+      ],
+      "anchor_cell": {
+        "row": 4,
+        "col": 1
+      },
+      "area": "area_11"
+    },
+    {
+      "text": "HALLWAY",
+      "bbox": [
+        600.76123,
+        280.112427,
+        640.706665,
+        291.192413
+      ],
+      "anchor_cell": {
+        "row": 4,
+        "col": 9
+      },
+      "area": "area_10"
+    },
+    {
+      "text": "REC ROOM",
+      "bbox": [
+        721.245117,
+        347.921021,
+        765.217712,
+        359.001007
+      ],
+      "anchor_cell": {
+        "row": 7,
+        "col": 14
+      },
+      "area": "area_5"
+    },
+    {
+      "text": "RECEPTION",
+      "bbox": [
+        617.088928,
+        527.674927,
+        664.075928,
+        538.754944
+      ],
+      "anchor_cell": {
+        "row": 15,
+        "col": 9
+      },
+      "area": "area_13"
+    },
+    {
+      "text": "SECURITY",
+      "bbox": [
+        481.53421,
+        527.756897,
+        521.863586,
+        538.836914
+      ],
+      "anchor_cell": {
+        "row": 15,
+        "col": 3
+      },
+      "area": "area_7"
+    },
+    {
+      "text": "SHOWERS",
+      "bbox": [
+        441.459015,
+        347.23941,
+        482.311249,
+        358.319397
+      ],
+      "anchor_cell": {
+        "row": 7,
+        "col": 1
+      },
+      "area": "area_16"
+    },
+    {
+      "text": "SOLITARY",
+      "bbox": [
+        737.703125,
+        258.208099,
+        777.542358,
+        269.288086
+      ],
+      "anchor_cell": {
+        "row": 3,
+        "col": 15
+      },
+      "area": "area_9"
+    },
+    {
+      "text": "VISITATION",
+      "bbox": [
+        428.328613,
+        459.646606,
+        475.560638,
+        470.726593
+      ],
+      "anchor_cell": {
+        "row": 12,
+        "col": 1
+      },
+      "area": "area_15"
+    },
+    {
+      "text": "WARDEN\u2019S OFFICE",
+      "bbox": [
+        691.6875,
+        527.674927,
+        765.386414,
+        538.754944
+      ],
+      "anchor_cell": {
+        "row": 15,
+        "col": 13
+      },
+      "area": "area_8"
+    }
+  ],
+  "positive_edges": [
+    {
+      "source_key": "room_windows_h_10_3",
+      "value": 1,
+      "axis": "h",
+      "row": 3,
+      "col": 10,
+      "connected_cells": [
+        {
+          "row": 2,
+          "col": 10
+        },
+        {
+          "row": 3,
+          "col": 10
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_10_5",
+      "value": 2,
+      "axis": "h",
+      "row": 5,
+      "col": 10,
+      "connected_cells": [
+        {
+          "row": 4,
+          "col": 10
+        },
+        {
+          "row": 5,
+          "col": 10
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_13_3",
+      "value": 1,
+      "axis": "h",
+      "row": 3,
+      "col": 13,
+      "connected_cells": [
+        {
+          "row": 2,
+          "col": 13
+        },
+        {
+          "row": 3,
+          "col": 13
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_13_5",
+      "value": 2,
+      "axis": "h",
+      "row": 5,
+      "col": 13,
+      "connected_cells": [
+        {
+          "row": 4,
+          "col": 13
+        },
+        {
+          "row": 5,
+          "col": 13
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_5_10",
+      "value": 1,
+      "axis": "h",
+      "row": 10,
+      "col": 5,
+      "connected_cells": [
+        {
+          "row": 9,
+          "col": 5
+        },
+        {
+          "row": 10,
+          "col": 5
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_7_3",
+      "value": 1,
+      "axis": "h",
+      "row": 3,
+      "col": 7,
+      "connected_cells": [
+        {
+          "row": 2,
+          "col": 7
+        },
+        {
+          "row": 3,
+          "col": 7
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_h_7_5",
+      "value": 2,
+      "axis": "h",
+      "row": 5,
+      "col": 7,
+      "connected_cells": [
+        {
+          "row": 4,
+          "col": 7
+        },
+        {
+          "row": 5,
+          "col": 7
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_12_14",
+      "value": 2,
+      "axis": "v",
+      "row": 14,
+      "col": 12,
+      "connected_cells": [
+        {
+          "row": 14,
+          "col": 11
+        },
+        {
+          "row": 14,
+          "col": 12
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_14_3",
+      "value": 2,
+      "axis": "v",
+      "row": 3,
+      "col": 14,
+      "connected_cells": [
+        {
+          "row": 3,
+          "col": 13
+        },
+        {
+          "row": 3,
+          "col": 14
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_3_12",
+      "value": 1,
+      "axis": "v",
+      "row": 12,
+      "col": 3,
+      "connected_cells": [
+        {
+          "row": 12,
+          "col": 2
+        },
+        {
+          "row": 12,
+          "col": 3
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_4_14",
+      "value": 1,
+      "axis": "v",
+      "row": 14,
+      "col": 4,
+      "connected_cells": [
+        {
+          "row": 14,
+          "col": 3
+        },
+        {
+          "row": 14,
+          "col": 4
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_4_3",
+      "value": 1,
+      "axis": "v",
+      "row": 3,
+      "col": 4,
+      "connected_cells": [
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 3,
+          "col": 4
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_4_4",
+      "value": 1,
+      "axis": "v",
+      "row": 4,
+      "col": 4,
+      "connected_cells": [
+        {
+          "row": 4,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 4
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_4_6",
+      "value": 1,
+      "axis": "v",
+      "row": 6,
+      "col": 4,
+      "connected_cells": [
+        {
+          "row": 6,
+          "col": 3
+        },
+        {
+          "row": 6,
+          "col": 4
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_4_9",
+      "value": 1,
+      "axis": "v",
+      "row": 9,
+      "col": 4,
+      "connected_cells": [
+        {
+          "row": 9,
+          "col": 3
+        },
+        {
+          "row": 9,
+          "col": 4
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_6_8",
+      "value": 2,
+      "axis": "v",
+      "row": 8,
+      "col": 6,
+      "connected_cells": [
+        {
+          "row": 8,
+          "col": 5
+        },
+        {
+          "row": 8,
+          "col": 6
+        }
+      ]
+    },
+    {
+      "source_key": "room_windows_v_8_14",
+      "value": 1,
+      "axis": "v",
+      "row": 14,
+      "col": 8,
+      "connected_cells": [
+        {
+          "row": 14,
+          "col": 7
+        },
+        {
+          "row": 14,
+          "col": 8
+        }
+      ]
+    }
+  ],
+  "in_front_cells": [
+    {
+      "row": 2,
+      "col": 7
+    },
+    {
+      "row": 2,
+      "col": 10
+    },
+    {
+      "row": 2,
+      "col": 13
+    },
+    {
+      "row": 3,
+      "col": 3
+    },
+    {
+      "row": 3,
+      "col": 4
+    },
+    {
+      "row": 3,
+      "col": 7
+    },
+    {
+      "row": 3,
+      "col": 10
+    },
+    {
+      "row": 3,
+      "col": 13
+    },
+    {
+      "row": 3,
+      "col": 14
+    },
+    {
+      "row": 4,
+      "col": 3
+    },
+    {
+      "row": 4,
+      "col": 4
+    },
+    {
+      "row": 4,
+      "col": 7
+    },
+    {
+      "row": 4,
+      "col": 10
+    },
+    {
+      "row": 4,
+      "col": 13
+    },
+    {
+      "row": 5,
+      "col": 7
+    },
+    {
+      "row": 5,
+      "col": 10
+    },
+    {
+      "row": 5,
+      "col": 13
+    },
+    {
+      "row": 6,
+      "col": 3
+    },
+    {
+      "row": 6,
+      "col": 4
+    },
+    {
+      "row": 8,
+      "col": 5
+    },
+    {
+      "row": 8,
+      "col": 6
+    },
+    {
+      "row": 9,
+      "col": 3
+    },
+    {
+      "row": 9,
+      "col": 4
+    },
+    {
+      "row": 9,
+      "col": 5
+    },
+    {
+      "row": 10,
+      "col": 5
+    },
+    {
+      "row": 12,
+      "col": 2
+    },
+    {
+      "row": 12,
+      "col": 3
+    },
+    {
+      "row": 14,
+      "col": 3
+    },
+    {
+      "row": 14,
+      "col": 4
+    },
+    {
+      "row": 14,
+      "col": 7
+    },
+    {
+      "row": 14,
+      "col": 8
+    },
+    {
+      "row": 14,
+      "col": 11
+    },
+    {
+      "row": 14,
+      "col": 12
+    }
+  ]
+}

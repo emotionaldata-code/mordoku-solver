@@ -1,0 +1,12 @@
+{
+  "constraints": [
+    {"clue_id": "clue_person_0","expression": {"op": "exists","variable": "o","domain": "objects","where": {"op": "all","items": [{"op": "object_kind","target": {"kind": "variable","name": "o"},"value": "boat"},{"op": "equal","left": {"kind": "person","id": "char_0"},"right": {"kind": "variable","name": "o"}}]}}},
+    {"clue_id": "clue_person_1","expression": {"op": "area","target": {"kind": "person","id": "char_1"},"area": "area_4"}},
+    {"clue_id": "clue_person_2","expression": {"op": "exists","variable": "o","domain": "objects","where": {"op": "all","items": [{"op": "object_kind","target": {"kind": "variable","name": "o"},"value": "shrub"},{"op": "adjacent","left": {"kind": "person","id": "char_2"},"right": {"kind": "variable","name": "o"},"same_area": true}]}}},
+    {"clue_id": "clue_person_3","expression": {"op": "direction","left": {"kind": "person","id": "char_3"},"right": {"kind": "person","id": "char_1"},"direction": "southwest"}},
+    {"clue_id": "clue_person_4","expression": {"op": "not","item": {"op": "exists","variable": "o","domain": "objects","where": {"op": "all","items": [{"op": "object_kind","target": {"kind": "variable","name": "o"},"value": "tree"},{"op": "adjacent","left": {"kind": "person","id": "char_4"},"right": {"kind": "variable","name": "o"},"same_area": true}]}}}},
+    {"clue_id": "clue_person_5","expression": {"op": "exists","variable": "o","domain": "objects","where": {"op": "all","items": [{"op": "object_kind","target": {"kind": "variable","name": "o"},"value": "boulder"},{"op": "adjacent","left": {"kind": "person","id": "char_5"},"right": {"kind": "variable","name": "o"},"same_area": true}]}}},
+    {"clue_id": "clue_person_6","expression": {"op": "exists","variable": "m","domain": "people","where": {"op": "all","items": [{"op": "not","item": {"op": "equal","left": {"kind": "variable","name": "m"},"right": {"kind": "person","id": "char_6"}}},{"op": "attribute","target": {"kind": "variable","name": "m"},"name": "sex","value": "male"},{"op": "same_area","left": {"kind": "person","id": "char_6"},"right": {"kind": "variable","name": "m"}}]}}},
+    {"clue_id": "general_1","expression": {"op": "forall","variable": "c","domain": "cells","where": {"op": "compare","left": {"op": "count","variable": "q","domain": "people","where": {"op": "same_area","left": {"kind": "variable","name": "c"},"right": {"kind": "variable","name": "q"}}},"relation": "ne","right": {"op": "integer","value": 1}}}}
+  ]
+}

@@ -1,0 +1,1202 @@
+{
+  "constraints": [
+    {
+      "clue_id": "clue_person_0",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "any",
+            "items": [
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_0"
+                },
+                "area": "area_6"
+              },
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_0"
+                },
+                "area": "area_11"
+              }
+            ]
+          },
+          {
+            "op": "exists",
+            "variable": "shark",
+            "domain": "objects",
+            "where": {
+              "op": "all",
+              "items": [
+                {
+                  "op": "object_kind",
+                  "target": {
+                    "kind": "variable",
+                    "name": "shark"
+                  },
+                  "value": "shark"
+                },
+                {
+                  "op": "compare",
+                  "left": {
+                    "op": "coordinate",
+                    "target": {
+                      "kind": "person",
+                      "id": "char_0"
+                    },
+                    "axis": "row"
+                  },
+                  "relation": "eq",
+                  "right": {
+                    "op": "coordinate",
+                    "target": {
+                      "kind": "variable",
+                      "name": "shark"
+                    },
+                    "axis": "row"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_1",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "area",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "area": "area_11"
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "man",
+              "domain": "people",
+              "where": {
+                "op": "all",
+                "items": [
+                  {
+                    "op": "area",
+                    "target": {
+                      "kind": "variable",
+                      "name": "man"
+                    },
+                    "area": "area_11"
+                  },
+                  {
+                    "op": "attribute",
+                    "target": {
+                      "kind": "variable",
+                      "name": "man"
+                    },
+                    "name": "sex",
+                    "value": "male"
+                  }
+                ]
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 1
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "cactus",
+              "domain": "objects",
+              "where": {
+                "op": "all",
+                "items": [
+                  {
+                    "op": "object_kind",
+                    "target": {
+                      "kind": "variable",
+                      "name": "cactus"
+                    },
+                    "value": "cactus"
+                  },
+                  {
+                    "op": "adjacent",
+                    "left": {
+                      "kind": "person",
+                      "id": "char_1"
+                    },
+                    "right": {
+                      "kind": "variable",
+                      "name": "cactus"
+                    },
+                    "same_area": true
+                  }
+                ]
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_2",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "area",
+            "target": {
+              "kind": "person",
+              "id": "char_2"
+            },
+            "area": "area_0"
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_0"
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 2
+            }
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_2"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_14"
+            },
+            "direction": "east"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_3",
+      "expression": {
+        "op": "direction",
+        "left": {
+          "kind": "person",
+          "id": "char_3"
+        },
+        "right": {
+          "kind": "person",
+          "id": "char_0"
+        },
+        "direction": "northeast"
+      }
+    },
+    {
+      "clue_id": "clue_person_4",
+      "expression": {
+        "op": "terrain",
+        "target": {
+          "kind": "person",
+          "id": "char_4"
+        },
+        "value": "sand"
+      }
+    },
+    {
+      "clue_id": "clue_person_5",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "area",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "area": "area_3"
+          },
+          {
+            "op": "forall",
+            "variable": "townsperson",
+            "domain": "people",
+            "where": {
+              "op": "any",
+              "items": [
+                {
+                  "op": "not",
+                  "item": {
+                    "op": "area",
+                    "target": {
+                      "kind": "variable",
+                      "name": "townsperson"
+                    },
+                    "area": "area_3"
+                  }
+                },
+                {
+                  "op": "equal",
+                  "left": {
+                    "kind": "variable",
+                    "name": "townsperson"
+                  },
+                  "right": {
+                    "kind": "person",
+                    "id": "char_5"
+                  }
+                },
+                {
+                  "op": "direction",
+                  "left": {
+                    "kind": "variable",
+                    "name": "townsperson"
+                  },
+                  "right": {
+                    "kind": "person",
+                    "id": "char_5"
+                  },
+                  "direction": "north"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_6",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_6"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_9"
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_6"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "coordinate",
+              "target": {
+                "kind": "person",
+                "id": "char_6"
+              },
+              "axis": "row"
+            },
+            "relation": "eq",
+            "right": {
+              "op": "arithmetic",
+              "left": {
+                "op": "coordinate",
+                "target": {
+                  "kind": "person",
+                  "id": "char_9"
+                },
+                "axis": "row"
+              },
+              "operator": "add",
+              "right": {
+                "op": "integer",
+                "value": 6
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_7",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_7"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_3"
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_7"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "exists",
+              "variable": "obj",
+              "domain": "objects",
+              "where": {
+                "op": "all",
+                "items": [
+                  {
+                    "op": "any",
+                    "items": [
+                      {
+                        "op": "object_kind",
+                        "target": {
+                          "kind": "variable",
+                          "name": "obj"
+                        },
+                        "value": "tree"
+                      },
+                      {
+                        "op": "object_kind",
+                        "target": {
+                          "kind": "variable",
+                          "name": "obj"
+                        },
+                        "value": "cactus"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "adjacent",
+                    "left": {
+                      "kind": "person",
+                      "id": "char_7"
+                    },
+                    "right": {
+                      "kind": "variable",
+                      "name": "obj"
+                    },
+                    "same_area": true
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "exists",
+              "variable": "obj",
+              "domain": "objects",
+              "where": {
+                "op": "all",
+                "items": [
+                  {
+                    "op": "any",
+                    "items": [
+                      {
+                        "op": "object_kind",
+                        "target": {
+                          "kind": "variable",
+                          "name": "obj"
+                        },
+                        "value": "tree"
+                      },
+                      {
+                        "op": "object_kind",
+                        "target": {
+                          "kind": "variable",
+                          "name": "obj"
+                        },
+                        "value": "cactus"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "adjacent",
+                    "left": {
+                      "kind": "person",
+                      "id": "char_3"
+                    },
+                    "right": {
+                      "kind": "variable",
+                      "name": "obj"
+                    },
+                    "same_area": true
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_8",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_8"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_13"
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_8"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_8"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_13"
+            },
+            "direction": "north"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_9",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "exists",
+            "variable": "obj",
+            "domain": "objects",
+            "where": {
+              "op": "all",
+              "items": [
+                {
+                  "op": "any",
+                  "items": [
+                    {
+                      "op": "object_kind",
+                      "target": {
+                        "kind": "variable",
+                        "name": "obj"
+                      },
+                      "value": "tree"
+                    }
+                  ]
+                },
+                {
+                  "op": "adjacent",
+                  "left": {
+                    "kind": "person",
+                    "id": "char_9"
+                  },
+                  "right": {
+                    "kind": "variable",
+                    "name": "obj"
+                  },
+                  "same_area": true
+                }
+              ]
+            }
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_9"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_11"
+            },
+            "direction": "east"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_10",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "exists",
+            "variable": "house",
+            "domain": "objects",
+            "where": {
+              "op": "all",
+              "items": [
+                {
+                  "op": "object_kind",
+                  "target": {
+                    "kind": "variable",
+                    "name": "house"
+                  },
+                  "value": "house"
+                },
+                {
+                  "op": "equal",
+                  "left": {
+                    "kind": "person",
+                    "id": "char_10"
+                  },
+                  "right": {
+                    "kind": "variable",
+                    "name": "house"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "guest",
+              "domain": "people",
+              "where": {
+                "op": "exists",
+                "variable": "house",
+                "domain": "objects",
+                "where": {
+                  "op": "all",
+                  "items": [
+                    {
+                      "op": "object_kind",
+                      "target": {
+                        "kind": "variable",
+                        "name": "house"
+                      },
+                      "value": "house"
+                    },
+                    {
+                      "op": "equal",
+                      "left": {
+                        "kind": "variable",
+                        "name": "guest"
+                      },
+                      "right": {
+                        "kind": "variable",
+                        "name": "house"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_11",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_11"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "exists",
+            "variable": "obj",
+            "domain": "objects",
+            "where": {
+              "op": "all",
+              "items": [
+                {
+                  "op": "any",
+                  "items": [
+                    {
+                      "op": "object_kind",
+                      "target": {
+                        "kind": "variable",
+                        "name": "obj"
+                      },
+                      "value": "tree"
+                    }
+                  ]
+                },
+                {
+                  "op": "adjacent",
+                  "left": {
+                    "kind": "person",
+                    "id": "char_11"
+                  },
+                  "right": {
+                    "kind": "variable",
+                    "name": "obj"
+                  },
+                  "same_area": true
+                }
+              ]
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "same_area",
+                "left": {
+                  "kind": "person",
+                  "id": "char_11"
+                },
+                "right": {
+                  "kind": "variable",
+                  "name": "resident"
+                }
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 4
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "woman",
+              "domain": "people",
+              "where": {
+                "op": "all",
+                "items": [
+                  {
+                    "op": "same_area",
+                    "left": {
+                      "kind": "person",
+                      "id": "char_11"
+                    },
+                    "right": {
+                      "kind": "variable",
+                      "name": "woman"
+                    }
+                  },
+                  {
+                    "op": "attribute",
+                    "target": {
+                      "kind": "variable",
+                      "name": "woman"
+                    },
+                    "name": "sex",
+                    "value": "female"
+                  }
+                ]
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_12",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_12"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "exists",
+            "variable": "shark",
+            "domain": "objects",
+            "where": {
+              "op": "all",
+              "items": [
+                {
+                  "op": "object_kind",
+                  "target": {
+                    "kind": "variable",
+                    "name": "shark"
+                  },
+                  "value": "shark"
+                },
+                {
+                  "op": "compare",
+                  "left": {
+                    "op": "coordinate",
+                    "target": {
+                      "kind": "person",
+                      "id": "char_12"
+                    },
+                    "axis": "col"
+                  },
+                  "relation": "eq",
+                  "right": {
+                    "op": "coordinate",
+                    "target": {
+                      "kind": "variable",
+                      "name": "shark"
+                    },
+                    "axis": "col"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_13",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_13"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_8"
+            }
+          },
+          {
+            "op": "not",
+            "item": {
+              "op": "area",
+              "target": {
+                "kind": "person",
+                "id": "char_13"
+              },
+              "area": "area_0"
+            }
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_13"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_8"
+            },
+            "direction": "south"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_14",
+      "expression": {
+        "op": "compare",
+        "left": {
+          "op": "count",
+          "variable": "southerner",
+          "domain": "people",
+          "where": {
+            "op": "direction",
+            "left": {
+              "kind": "variable",
+              "name": "southerner"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_14"
+            },
+            "direction": "south"
+          }
+        },
+        "relation": "eq",
+        "right": {
+          "op": "integer",
+          "value": 2
+        }
+      }
+    },
+    {
+      "clue_id": "general_1",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_3"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_4"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_3"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_5"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_3"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_6"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_3"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_11"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_4"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_5"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_4"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_6"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_4"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_11"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_5"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_6"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_5"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_11"
+              }
+            }
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_6"
+              }
+            },
+            "relation": "ne",
+            "right": {
+              "op": "count",
+              "variable": "resident",
+              "domain": "people",
+              "where": {
+                "op": "area",
+                "target": {
+                  "kind": "variable",
+                  "name": "resident"
+                },
+                "area": "area_11"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

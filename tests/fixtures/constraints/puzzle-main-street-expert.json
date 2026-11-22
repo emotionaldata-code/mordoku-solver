@@ -1,0 +1,735 @@
+{
+  "constraints": [
+    {
+      "clue_id": "clue_person_0",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_0"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_8"
+            }
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_0"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_8"
+            },
+            "direction": "north"
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "other",
+              "domain": "people",
+              "where": {
+                "op": "same_area",
+                "left": {
+                  "kind": "person",
+                  "id": "char_0"
+                },
+                "right": {
+                  "kind": "variable",
+                  "name": "other"
+                }
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_1",
+      "expression": {
+        "op": "any",
+        "items": [
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "object": "object_1_6"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "object": "object_1_8"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "object": "object_10_7"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "object": "object_11_1"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_1"
+            },
+            "object": "object_11_2"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_2",
+      "expression": {
+        "op": "exists",
+        "variable": "driver",
+        "domain": "people",
+        "where": {
+          "op": "all",
+          "items": [
+            {
+              "op": "any",
+              "items": [
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_5_3"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_5_4"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_0"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_1"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_6"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_7"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_9"
+                },
+                {
+                  "op": "on_object",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "object": "object_6_10"
+                }
+              ]
+            },
+            {
+              "op": "compare",
+              "left": {
+                "op": "arithmetic",
+                "left": {
+                  "op": "coordinate",
+                  "target": {
+                    "kind": "variable",
+                    "name": "driver"
+                  },
+                  "axis": "col"
+                },
+                "operator": "add",
+                "right": {
+                  "op": "integer",
+                  "value": 3
+                }
+              },
+              "relation": "eq",
+              "right": {
+                "op": "coordinate",
+                "target": {
+                  "kind": "person",
+                  "id": "char_2"
+                },
+                "axis": "col"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "clue_id": "clue_person_3",
+      "expression": {
+        "op": "exists",
+        "variable": "beyond",
+        "domain": "cells",
+        "where": {
+          "op": "all",
+          "items": [
+            {
+              "op": "adjacent",
+              "left": {
+                "kind": "person",
+                "id": "char_3"
+              },
+              "right": {
+                "kind": "variable",
+                "name": "beyond"
+              },
+              "same_area": false
+            },
+            {
+              "op": "not",
+              "item": {
+                "op": "same_area",
+                "left": {
+                  "kind": "person",
+                  "id": "char_3"
+                },
+                "right": {
+                  "kind": "variable",
+                  "name": "beyond"
+                }
+              }
+            },
+            {
+              "op": "compare",
+              "left": {
+                "op": "count",
+                "variable": "occupant",
+                "domain": "people",
+                "where": {
+                  "op": "same_area",
+                  "left": {
+                    "kind": "variable",
+                    "name": "occupant"
+                  },
+                  "right": {
+                    "kind": "variable",
+                    "name": "beyond"
+                  }
+                }
+              },
+              "relation": "eq",
+              "right": {
+                "op": "integer",
+                "value": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "clue_id": "clue_person_4",
+      "expression": {
+        "op": "any",
+        "items": [
+          {
+            "op": "all",
+            "items": [
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_4"
+                },
+                "area": "area_7"
+              },
+              {
+                "op": "exists",
+                "variable": "woman",
+                "domain": "people",
+                "where": {
+                  "op": "all",
+                  "items": [
+                    {
+                      "op": "area",
+                      "target": {
+                        "kind": "variable",
+                        "name": "woman"
+                      },
+                      "area": "area_8"
+                    },
+                    {
+                      "op": "attribute",
+                      "target": {
+                        "kind": "variable",
+                        "name": "woman"
+                      },
+                      "name": "sex",
+                      "value": "female"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "op": "all",
+            "items": [
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_4"
+                },
+                "area": "area_8"
+              },
+              {
+                "op": "exists",
+                "variable": "woman",
+                "domain": "people",
+                "where": {
+                  "op": "all",
+                  "items": [
+                    {
+                      "op": "area",
+                      "target": {
+                        "kind": "variable",
+                        "name": "woman"
+                      },
+                      "area": "area_7"
+                    },
+                    {
+                      "op": "attribute",
+                      "target": {
+                        "kind": "variable",
+                        "name": "woman"
+                      },
+                      "name": "sex",
+                      "value": "female"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_5",
+      "expression": {
+        "op": "any",
+        "items": [
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_5_3"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_5_4"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_5_7"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_5_8"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_5_9"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_0"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_1"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_6"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_7"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_9"
+          },
+          {
+            "op": "on_object",
+            "target": {
+              "kind": "person",
+              "id": "char_5"
+            },
+            "object": "object_6_10"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_6",
+      "expression": {
+        "op": "compare",
+        "left": {
+          "op": "coordinate",
+          "target": {
+            "kind": "person",
+            "id": "char_6"
+          },
+          "axis": "col"
+        },
+        "relation": "le",
+        "right": {
+          "op": "integer",
+          "value": 1
+        }
+      }
+    },
+    {
+      "clue_id": "clue_person_7",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "any",
+            "items": [
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_0_1"
+                }
+              },
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_0_6"
+                }
+              },
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_8_11"
+                }
+              },
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_10_6"
+                }
+              },
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_10_10"
+                }
+              },
+              {
+                "op": "adjacent",
+                "left": {
+                  "kind": "person",
+                  "id": "char_7"
+                },
+                "right": {
+                  "kind": "object",
+                  "id": "object_11_3"
+                }
+              }
+            ]
+          },
+          {
+            "op": "same_area",
+            "left": {
+              "kind": "person",
+              "id": "char_7"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_8",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "any",
+            "items": [
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_8"
+                },
+                "area": "area_2"
+              },
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_8"
+                },
+                "area": "area_9"
+              }
+            ]
+          },
+          {
+            "op": "direction",
+            "left": {
+              "kind": "person",
+              "id": "char_8"
+            },
+            "right": {
+              "kind": "person",
+              "id": "char_3"
+            },
+            "direction": "east"
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_9",
+      "expression": {
+        "op": "all",
+        "items": [
+          {
+            "op": "any",
+            "items": [
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_9"
+                },
+                "area": "area_2"
+              },
+              {
+                "op": "area",
+                "target": {
+                  "kind": "person",
+                  "id": "char_9"
+                },
+                "area": "area_9"
+              }
+            ]
+          },
+          {
+            "op": "compare",
+            "left": {
+              "op": "count",
+              "variable": "other",
+              "domain": "people",
+              "where": {
+                "op": "same_area",
+                "left": {
+                  "kind": "person",
+                  "id": "char_9"
+                },
+                "right": {
+                  "kind": "variable",
+                  "name": "other"
+                }
+              }
+            },
+            "relation": "eq",
+            "right": {
+              "op": "integer",
+              "value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "clue_id": "clue_person_10",
+      "expression": {
+        "op": "exists",
+        "variable": "statue_neighbor",
+        "domain": "people",
+        "where": {
+          "op": "all",
+          "items": [
+            {
+              "op": "any",
+              "items": [
+                {
+                  "op": "adjacent",
+                  "left": {
+                    "kind": "variable",
+                    "name": "statue_neighbor"
+                  },
+                  "right": {
+                    "kind": "object",
+                    "id": "object_0_4"
+                  }
+                },
+                {
+                  "op": "adjacent",
+                  "left": {
+                    "kind": "variable",
+                    "name": "statue_neighbor"
+                  },
+                  "right": {
+                    "kind": "object",
+                    "id": "object_9_2"
+                  }
+                }
+              ]
+            },
+            {
+              "op": "compare",
+              "left": {
+                "op": "arithmetic",
+                "left": {
+                  "op": "coordinate",
+                  "target": {
+                    "kind": "variable",
+                    "name": "statue_neighbor"
+                  },
+                  "axis": "row"
+                },
+                "operator": "add",
+                "right": {
+                  "op": "integer",
+                  "value": 2
+                }
+              },
+              "relation": "eq",
+              "right": {
+                "op": "coordinate",
+                "target": {
+                  "kind": "person",
+                  "id": "char_10"
+                },
+                "axis": "row"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
